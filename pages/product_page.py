@@ -14,10 +14,15 @@ class ProductPage(BasePage):
 
     def checking_the_product_name(self):
         book = self.browser.find_element(*ProductLocators.BOOK_NAME).text
+        print(book)
         book_in_message = self.browser.find_element(*ProductLocators.BOOK_NAME_BASKET).text
         assert book == book_in_message, 'The names are different'
+        print(book_in_message)
+
 
     def price_comparison(self):
-        price = self.browser.find_element(*ProductLocators.BOOK_NAME).text
-        price_in_message = self.browser.find_element(*ProductLocators.BOOK_NAME_BASKET).text
+        price = self.browser.find_element(*ProductLocators.PRICE).text
+        print(price)
+        price_in_message = self.browser.find_element(*ProductLocators.PRICE_BASKET).text
         assert price == price_in_message, 'The names are different'
+        print(price_in_message)
