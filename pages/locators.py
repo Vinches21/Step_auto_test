@@ -21,6 +21,12 @@ class ProductLocators():
 class ProductPageLocators():
     SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
 
+class BasketLocators():
+    BASKET = (By.XPATH, '//a[@class="btn btn-default"]')
+    MESSAGE_EMPTY = (By.XPATH, '//*[@id="content_inner"]/p')
+    MESSAGE_PRODUCTS_IN_BASKET = (By.XPATH, '//*[@id="content_inner"]/div[1]/div/h2')
+
+
 
 
 

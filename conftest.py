@@ -14,7 +14,7 @@ def browser(request):
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
     browser = webdriver.Chrome(executable_path='C:\\Users\\Home\PycharmProjects\\resource\\chromedriver.exe', options=options)
-    browser.implicitly_wait(10)
+    # browser.implicitly_wait(10)
     yield browser
     print("\nQuit browser..")
     browser.quit()

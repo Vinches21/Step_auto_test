@@ -1,15 +1,29 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.alert import Alert
 from selenium.common.exceptions import NoAlertPresentException
 import math
-
+from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
+from .locators import BasketLocators
 
 class BasePage():
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(10)
+
+    def go_to_login_page(self):
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link.click()
+
+    def go_to_the_shopping_cart(self):
+        button_basket = self.browser.find_element(*BasketLocators.BASKET)
+        button_basket.click()
+
+
 
     def open(self):
         self.browser.get(self.url)
@@ -19,6 +33,25 @@ class BasePage():
             self.browser.find_element(how, what)
         except NoSuchElementException:
             return False
+        return True
+
+
+
+    def is_not_element_present(self, how, what, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located((how, what)))
+        except TimeoutException:
+            return True
+
+        return False
+
+    def is_disappeared(self, how, what, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout, 1, TimeoutException). \
+                until_not(EC.presence_of_element_located((how, what)))
+        except TimeoutException:
+            return False
+
         return True
 
     def solve_quiz_and_get_code(self):
@@ -34,3 +67,7 @@ class BasePage():
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
