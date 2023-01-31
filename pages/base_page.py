@@ -4,8 +4,8 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support import expected_conditions as EC
-from pages.locators import BasePageLocators
-from pages.locators import BasketLocators
+from .locators import BasePageLocators
+from .locators import BasketLocators
 
 class BasePage():
     def __init__(self, browser, url):

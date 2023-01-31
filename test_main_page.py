@@ -1,7 +1,7 @@
 import pytest
-from pages.main_page import MainPage
-from pages.login_page import LoginPage
-from pages.basket_page import BasketPage
+from .pages.main_page import MainPage
+from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 
 
 @pytest.mark.login_guest
@@ -34,7 +34,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
 
 def test_add_to_cart(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=newYear"
-    page = MainPagePage(browser, link) # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
+    page = MainPage(browser, link) # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
     page.open() # открываем страницу
     page.add_to_cart()
 
