@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
@@ -11,6 +12,9 @@ class MainPageLocators():
 class LoginPageLocators():
     EMAIL_LINK = (By.XPATH, '//input[@name="login-username"]')
     EMAIL_REGISTR_LINK = (By.XPATH, '//input[@name="registration-email"]')
+    PASSWORD_REGISTR = (By.XPATH, '//input[@name="registration-password1"]')
+    PASSWORD_REGISTR_2 = (By.XPATH, '//input[@name="registration-password2"]')
+    REGISTER_LINK = (By.XPATH, '//button[@name="registration_submit"]')
 
 class ProductLocators():
     BOOK_NAME = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/h1')
