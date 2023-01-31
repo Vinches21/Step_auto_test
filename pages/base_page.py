@@ -1,13 +1,13 @@
+import math
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.alert import Alert
 from selenium.common.exceptions import NoAlertPresentException
-import math
 from selenium.webdriver.support import expected_conditions as EC
-from .locators import BasePageLocators
-from .locators import BasketLocators
+from pages.locators import BasePageLocators
+from pages.locators import BasketLocators
 
 class BasePage():
     def __init__(self, browser, url):

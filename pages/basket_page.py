@@ -1,7 +1,7 @@
 import time
 from selenium.webdriver.common.by import By
-from .base_page import BasePage
-from .locators import BasketLocators
+from pages.base_page import BasePage
+from pages.locators import BasketLocators
 
 
 class BasketPage(BasePage):

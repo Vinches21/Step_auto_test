@@ -5,6 +5,13 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
+
+class BasketLocators():
+    BASKET = (By.XPATH, '//a[@class="btn btn-default"]')
+    MESSAGE_EMPTY = (By.XPATH, '//*[@id="content_inner"]/p')
+    MESSAGE_PRODUCTS_IN_BASKET = (By.XPATH, '//*[@id="content_inner"]/div[1]/div/h2')
+
+
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     CART_BUTTON = (By.XPATH, "//button[@class='btn btn-lg btn-primary btn-add-to-basket']")
@@ -25,10 +32,7 @@ class ProductLocators():
 class ProductPageLocators():
     SUCCESS_MESSAGE = (By.XPATH, '//*[@id="messages"]/div[1]/div')
 
-class BasketLocators():
-    BASKET = (By.XPATH, '//a[@class="btn btn-default"]')
-    MESSAGE_EMPTY = (By.XPATH, '//*[@id="content_inner"]/p')
-    MESSAGE_PRODUCTS_IN_BASKET = (By.XPATH, '//*[@id="content_inner"]/div[1]/div/h2')
+
 
 
 
