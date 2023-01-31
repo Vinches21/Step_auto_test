@@ -1,5 +1,5 @@
-from pages.base_page import BasePage
-from pages.locators import LoginPageLocators
+from PycharmProjects.Step_auto_test import BasePage
+from PycharmProjects.Step_auto_test import LoginPageLocators
 
 
 class LoginPage(BasePage):

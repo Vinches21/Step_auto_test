@@ -1,9 +1,9 @@
 import time
 import pytest
-from pages.main_page import MainPage
-from pages.login_page import LoginPage
-from pages.product_page import ProductPage
-from pages.basket_page import BasketPage
+from PycharmProjects.Step_auto_test import MainPage
+from PycharmProjects.Step_auto_test import LoginPage
+from PycharmProjects.Step_auto_test import ProductPage
+from PycharmProjects.Step_auto_test import BasketPage
 
 
 

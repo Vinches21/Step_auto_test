@@ -1,7 +1,5 @@
-import time
-from selenium.webdriver.common.by import By
-from pages.base_page import BasePage
-from pages.locators import BasketLocators
+from PycharmProjects.Step_auto_test import BasePage
+from PycharmProjects.Step_auto_test import BasketLocators
 
 
 class BasketPage(BasePage):
