@@ -1,4 +1,4 @@
-from PycharmProjects.Step_auto_test import BasePage
+from pages import BasePage
 
 
 class ProductPage(BasePage):

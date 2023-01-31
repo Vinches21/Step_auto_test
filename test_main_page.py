@@ -1,7 +1,7 @@
 import pytest
-from PycharmProjects.Step_auto_test import MainPage
-from PycharmProjects.Step_auto_test import LoginPage
-from PycharmProjects.Step_auto_test import BasketPage
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
+from pages.base_page import BasketPage
 
 
 @pytest.mark.login_guest

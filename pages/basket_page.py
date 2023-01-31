@@ -1,5 +1,5 @@
-from PycharmProjects.Step_auto_test import BasePage
-from PycharmProjects.Step_auto_test import BasketLocators
+from pages import BasePage
+from pages import BasketLocators
 
 
 class BasketPage(BasePage):
